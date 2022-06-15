@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<style>
+    html {
+        height: 100%
+    }
+    th {
+    font-weight: bold
+    }
+
+    h2 {
+        display: inline
+    }
+
+    input[type=submit] {
+        font-weight: bold
+    }
+
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Result Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+<!--    <link rel="stylesheet" href="./style.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+        <h1><u>Summary</u><br></h1>
+        <div class="content">
+            <h2><br>Prediction:  {{prediction}}</h2>
+        </div>
+
+        <div class="content">
+            <h2><br>R^2 Score:  {{r2}}</h2>
+        </div>
+
+        <div class="content">
+            <h2><br>Adjusted R^2 Score:  {{adj_r2}}</h2>
+        </div>
+
+
+        <div class="form">
+            <form action="/report" method="POST">
+                <h2><br>Pandas  ProfileReport: </h2>
+                <input type="submit" value="View Report">
+            </form>
+        </div>
+
+        <div class="form">
+            <form action="/bulk" method="POST">
+                <h2><br>Bulk Prediction: </h2>
+                <input type="submit" value="View Prediction">
+            </form>
+        </div>
+
+
+</body>
+
+</html>

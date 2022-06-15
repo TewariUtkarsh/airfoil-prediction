@@ -1,0 +1,10 @@
+{
+  "data": {
+    "host": "localhost",
+    "database": "airfoil",
+    "user": "root",
+    "passwd": "Kavita@19",
+    "table": "Validation_Data",
+    "columns": ["Frequency", "Angle_of_Attack", "Chord_Length", "Velocity", "Suction_Side", "Scaled_Sound"]
+  }
+}
